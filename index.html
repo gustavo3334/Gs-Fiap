@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto GS - Enchentes</title>
+  <link rel="stylesheet" href="styles.css">
+<body>
+
+ <header>
+    <h1>Projeto Enchentes</h1>
+    <span class="menu-button" onclick="toggleMenu()">☰</span>
+  </header>
+  <nav class="menu" id="menu">
+    <a href="#form">Formulário</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <div class="background-buttons">
+    <button onclick="mudarFundo('#f0f0f0')">Cinza Claro</button>
+    <button onclick="mudarFundo('#ffffff')">Branco</button>
+    <button onclick="mudarFundo('#e0f7fa')">Azul Claro</button>
+  </div>
+
+  <div class="slideshow">
+    <img class="slide" src="o-planeta-nas-maos-de-uma-pessoa-criada-com-a-ajuda-da-tecnologia-de-ia-generativa_185193-162694.avif" alt="Imagem 1">
+  
+  </div>
+
+  <div class="formulario" id="form">
+    <h2>Formulário de Contato</h2>
+    <form onsubmit="return validarFormulario()">
+      <label>Nome:</label><br>
+      <input type="text" id="nome" required><br><br>
+      <label>Email:</label><br>
+      <input type="email" id="email" required><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="quiz" id="quiz">
+    <h2>Quiz sobre Enchentes</h2>
+    <div id="perguntas"></div>
+    <button onclick="mostrarResultado()">Finalizar</button>
+    <p id="resultado"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
